@@ -59,7 +59,7 @@ const useWorkoutStore = create((set, get) => ({
     /* express */
     const user = JSON.parse(localStorage.getItem("user"));
 
-    const res = await fetch("https://workout-buddy-express-backend.herokuapp.com//api/workouts", {
+    const res = await fetch("https://workout-buddy-express-backend.herokuapp.com/api/workouts", {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {
@@ -99,7 +99,7 @@ const useWorkoutStore = create((set, get) => ({
     /* express */
     const user = JSON.parse(localStorage.getItem('user'))
 
-    const res = await fetch(`https://workout-buddy-express-backend.herokuapp.com//api/workouts/${id}`, {
+    const res = await fetch(`https://workout-buddy-express-backend.herokuapp.com/api/workouts/${id}`, {
       method: "DELETE",
       headers: { 'Authorization': `Bearer ${user.token}` }
     });
